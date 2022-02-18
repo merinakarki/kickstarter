@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Landing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <!-- Note: The "styleN" class below should match that of the banner element. -->
+        <header id="header" class="alt style2">
+            <a href="index.html" class="logo"><strong>Kickstarter</strong> <span>Success Prediction</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landing.html">Landing</a></li>
+                <li><a href="generic.html">Generic</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+            <ul class="actions stacked">
+                <li><a href="#" class="button primary fit">Get Started</a></li>
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <div id="main">
+            <!-- Three -->
+            <section id="three">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Get Started with your kickstater predictions!</h2>
+                    </header>
+                    <p>This one has a button so maybe it might be best to put the input info here idk..</p>
+                </div>
+                <div class="form-container">
+                    <form class="form-horizontal" action="/predict/" method="post">
+                        <!-- Selection for "goal" -->
+                        <div class="form-group row">
+                            <label style="align-content:center;" class="control-label col-sm-2" for="goal">Goal
+                                ($):</label>
+                            <div class="col-sm-4">
+                                <input type="text" style="text-align:center;" class="form-control" id="goal" name="goal"
+                                    placeholder="fundraising goal">
+                            </div>
+                        </div>
+                        <!-- Selection for "duration" -->
+                        <div style="text-align: center;">
+                            <div class="form-group row" style="text-align: center;">
+                                <label class="control-label col-sm-2" for="duration"> Duration (in weeks):</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="duration" name="duration"
+                                        placeholder="how long does your campaign last?">
+                                </div>
+                            </div>
+
+                            <label for="currency"> Choose your currency:</label>
+                            <select style="text-align: center;" id="currency" name="currency">
+                                <option value="13">USD</option>
+                                <option value="5">GBP</option>
+                                <option value="1">CAD</option>
+                                <option value="0">AUD</option>
+                                <option value="9">NOK</option>
+                                <option value="4">EUR</option>
+                                <option value="8">MXN</option>
+                                <option value="11">SEK</option>
+                                <option value="10">NZD</option>
+                                <option value="2">CHF</option>
+                                <option value="3">DKK</option>
+                                <option value="6">HKD</option>
+                                <option value="12">SGD</option>
+                                <option value="7">JPY</option>
+                            </select>
+                            <!-- Selection for "country (drop down)" -->
+                            <label for="country"> Choose your country:</label>
+                            <select style="text-align: center;" id="country" name="country">
+                                <option value="22">US</option>
+                                <option value="9">GB</option>
+                                <option value="3">CA</option>
+                                <option value="1">AU</option>
+                                <option value="18">NO</option>
+                                <option value="12">IT</option>
+                                <option value="5">DE</option>
+                                <option value="11">IE</option>
+                                <option value="15">MX</option>
+                                <option value="9">ES</option>
+                                <option value="7">N,0</option>
+                                <option value="16">SE</option>
+                                <option value="20">FR</option>
+                                <option value="8">NL</option>
+                                <option value="17">NZ</option>
+                                <option value="19">CH</option>
+                                <option value="4">AT</option>
+                                <option value="0">DK</option>
+                                <option value="6">BE</option>
+                                <option value="2">HK</option>
+                                <option value="10">LU</option>
+                                <option value="14">SG</option>
+                                <option value="21">JP</option>
+                            </select>
+
+                            <div class="form-group row">
+                                <label style="align-items:center;" class="control-label col-sm-2" for="">&nbsp;</label>
+                                <div class="col-sm-offset-2 col-sm-4">
+                                    <button type="submit" class="btn btn-primary">Predict</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Ends form section -->
+
+
+                </div>
+
+                <!-- Scripts -->
+                <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>

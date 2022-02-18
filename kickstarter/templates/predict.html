@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<!--
+  Forty by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Landing - Forty by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+    </noscript>
+</head>
+
+<body class="alt style2">
+    <!-- Wrapper -->
+    <section class="style2"
+        style="background-position: center 0px; background-image: url_for('static', filename='assets/css/main.css');">
+        <div class="row justify-content-md-center mb-4">
+            <h1 style="display:flex;align-items: center;justify-content: center;" class='text-primary'>Prediction is:
+            </h1>
+            <!-- <p>{{ prediction }}</p> -->
+            <div class="row justify-content-md-center">
+                <div class="thumbnail">
+                    {% if prediction == "Failed" %}
+                    <p>Our gradient boost model predicted that this Kickstarter campaign will...</p>
+                    <img src="{{url_for('static', filename='images/fail.jpg')}}" class="img-thumbnail" />
+                    <p> Want to learn more about how this prediction was made?</p>
+                    <button type="button" onclick="window.location.href='/about'">Learn More</button>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="thumbnail">
+                    {% if prediction == "Success" %}
+                    <p>Our gradient boost model predicted that this Kickstarter campaign will be a...</p>
+                    <img src="{{url_for('static', filename='images/success.jpg')}}" class="img-thumbnail" />
+                    <p> Want to learn more about how this prediction was made?</p>
+                    <button type="button" onclick="window.location.href='/about'">Learn More</button>
+                    <button type="button" onclick="window.location.href='/'">Go Home</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
